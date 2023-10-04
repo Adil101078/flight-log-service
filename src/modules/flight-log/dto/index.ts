@@ -11,3 +11,7 @@ export const GetAllDTO = Joi.object({
     startIndex: Joi.string().optional(),
     itemsPerPage: Joi.string().optional(),
 })
+
+export const InsertLogDTO = Joi.object({
+    dataArray: Joi.array().required()
+})
