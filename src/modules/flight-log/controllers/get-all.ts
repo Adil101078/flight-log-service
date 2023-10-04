@@ -5,6 +5,7 @@ import RegexQueryGeneratorHelper from '@helpers/regex-query-generator.helper'
 import PaginationHelper from '@helpers/pagination.helper'
 import requestValidator from '@helpers/request-validator.helper'
 import { GetAllDTO } from '../dto'
+import constant from '@core/constants'
 
 export default async function GetLogs(req: Request, res: Response) {
 	const {
@@ -47,7 +48,7 @@ export default async function GetLogs(req: Request, res: Response) {
 	const query = await RegexQueryGeneratorHelper.Generate({
 		inputs: {
 			searchFields,
-			excludeRegex: ['traceId', 'companyId', 'cartId', 'type'],
+			excludeRegex: constant.FLIGHT.EXCLUDE_FIELDS,
 		},
 	})
 	const result = await new PaginationHelper(App.Models.FlightLog).paginate({

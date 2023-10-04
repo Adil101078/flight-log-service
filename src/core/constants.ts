@@ -6,6 +6,9 @@ const constant = {
     MODELS:{
         FLIGHT_LOG: 'flightlogs'
     },
+    FLIGHT:{
+        EXCLUDE_FIELDS: ['traceId', 'companyId', 'cartId', 'type', 'request', 'response', 'createdAt', 'updatedAt']
+    }
 }
 
 export default constant
