@@ -11,12 +11,12 @@ export default async function GetLogs(req: Request, res: Response) {
 	const {
 		startIndex,
 		itemsPerPage,
-		traceId,
+		trace_id,
 		name,
-		companyId,
+		company_id,
 		source,
-		sourceFrom,
-		cartId,
+		source_from,
+		cart_id,
 		type,
 	} = req.query
 
@@ -31,16 +31,16 @@ export default async function GetLogs(req: Request, res: Response) {
 	const searchFields: {
 		name?: string
 		source?: string
-		sourceFrom?: string
+		source_from?: string
 		type?: string
 	} = _.pickBy(
 		{
 			name,
 			source,
-			sourceFrom,
-			traceId,
-			companyId,
-			cartId,
+			source_from,
+			trace_id,
+			company_id,
+			cart_id,
 			type,
 		},
 		_.identity
@@ -56,10 +56,10 @@ export default async function GetLogs(req: Request, res: Response) {
 		projection: {
 			name: 1,
 			source: 1,
-			sourceFrom: 1,
-			traceId: 1,
-			companyId: 1,
-			cartId: 1,
+			source_from: 1,
+			trace_id: 1,
+			company_id: 1,
+			cart_id: 1,
 			type: 1,
 			response: 1,
 			request: 1,

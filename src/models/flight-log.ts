@@ -6,12 +6,12 @@ export interface IFlightLog {
 	name: string
     request: Schema.Types.Mixed
     response: Schema.Types.Mixed
-    companyId: string
+    company_id: string
     source: string
-    sourceFrom: string
-    cartId: string
+    source_from: string
+    cart_id: string
     type: string
-    traceId: string
+    trace_id: string
 }
 
 const FlightLogSchema = new Schema<IFlightLog>(
@@ -19,12 +19,12 @@ const FlightLogSchema = new Schema<IFlightLog>(
         name: String,
         request: Schema.Types.Mixed,
         response: Schema.Types.Mixed,
-        companyId: String,
+        company_id: String,
         source: String,
-        sourceFrom: String,
-        cartId: String,
+        source_from: String,
+        cart_id: String,
         type: String,
-        traceId: String
+        trace_id: String
 	},
 	{
 		timestamps: true,

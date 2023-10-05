@@ -7,7 +7,7 @@ const constant = {
         FLIGHT_LOG: 'flightlogs'
     },
     FLIGHT:{
-        EXCLUDE_FIELDS: ['traceId', 'companyId', 'cartId', 'type', 'request', 'response', 'createdAt', 'updatedAt']
+        EXCLUDE_FIELDS: ['trace_id', 'company_id', 'cart_id', 'type', 'request', 'response', 'createdAt', 'updatedAt']
     }
 }
 
